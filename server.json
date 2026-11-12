@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.aw3-technology/vibez-approval",
+  "title": "Vibez.now approval",
+  "description": "Make an AI agent wait for a person's approval, on the web or their phone, before it acts.",
+  "repository": {
+    "url": "https://github.com/aw3-technology/vibez-approval",
+    "source": "github"
+  },
+  "websiteUrl": "https://vibez.now/use-cases/ai-agent-approval-api",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "vibez-approval",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "VIBEZ_API_KEY",
+          "description": "API key from Settings in Vibez.now",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "VIBEZ_AGENT_NAME",
+          "description": "Names the agent, for auto-approve rules",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
